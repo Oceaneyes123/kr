@@ -47,7 +47,7 @@
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon2">
+                    <input id="time-value-1" type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon2">일시 변경</button>
                     </div>
@@ -382,7 +382,7 @@
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
                  <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon3">
+                    <input id="time-value-2" type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon3">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon3">일시 변경</button>
                     </div>
@@ -416,7 +416,7 @@
         </div>
       </section>
 
-      <section class="content-section text-center" style="background-image: linear-gradient(to right, #2d0247, #2e0e1e);">
+      <section class="formSection1 content-section text-center" style="background-image: linear-gradient(to right, #2d0247, #2e0e1e);">
     <div class=" container">
         <div class="content-section-heading mb-5">
             <p class="text-white mb-0" style="font-size: 50px; font-weight: 900">지금 시작하면</p>
@@ -461,7 +461,7 @@
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
                  <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon4">
+                    <input id="time-value-3" type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon4">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon4">일시 변경</button>
                     </div>
@@ -514,7 +514,7 @@
                     </div>
                 </div>
                     <div class="d-flex justify-content-center" style="overflow-y: auto">
-                        <div class="col-6 time">
+                        <div class="col-6 time" id="time">
                         <ul class="col-12 list">
                             <li>12:00</li>
                             <li>12:10</li>
@@ -778,6 +778,7 @@ $( document ).ready(function() {
 $(window).scroll(function(){
   if (isScrolledIntoView($('.formSection'))){
    $('.bottomSheetContainer').hide()
+   console.log('a')
   }else{
     $('.bottomSheetContainer').show()
   }
@@ -845,6 +846,25 @@ timeTab2.onclick = function(){
     timeTab2.style.backgroundColor = '#3d8bf7';
 }
 
+
+var time = document.getElementById('time');
+
+time.addEventListener('click', function(event){
+
+    var date;
+    if(event.target.tagName === 'LI'){
+        if(timeTab1.style.backgroundColor == "white"){
+            date = timeTab2.innerHTML;
+        }else{
+            date = timeTab1.innerHTML;
+        }
+        document.getElementById('time-value-1').value = date.trim() + ' ' + event.target.innerHTML;
+        document.getElementById('time-value-2').value = date.trim() + ' ' + event.target.innerHTML;
+        document.getElementById('time-value-3').value = date.trim() + ' ' + event.target.innerHTML;
+        timeModal.style.display = 'none';
+         body.style.overflowY = "visible";
+    }
+});
    
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
