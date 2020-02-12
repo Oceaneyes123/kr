@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 </head>
@@ -24,7 +27,7 @@
 <body id="page-top">
     <!-- Navigation -->
     <!-- Header -->
-    <header class="header">
+    <header class="header form2">
         <div class="d-flex">
             <div class="container text-center my-auto">
                 <h3 class="mb-1 text-white display-3">한 달에 400분</h3>
@@ -44,7 +47,10 @@
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon2">일시 변경</button>
+                    </div>
                 </div>
                 <div class="input-group input-group-lg mb-4">
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
@@ -118,7 +124,7 @@
         </div>
     </section>
     <!-- Services -->
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff,#ffd8f6); ">
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff,#ffd8f6); ">
         
             <div class="content-section-heading mb-5">
                 <p class="h1" style="color: #7d16fd; font-weight: 900;  font-size: 90px">400분</p>
@@ -146,7 +152,7 @@
         
     </section>
     <!-- Callout -->
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff,#dfffed);">
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff,#dfffed);">
     
         <div class="content-section-heading mb-5">
             <p class="h1" style="color: #4ec300; font-weight: 900;  font-size: 90px">1:1 </p>
@@ -173,7 +179,7 @@
         
     </section>
     <!-- Portfolio -->
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff,#ffd8f6);>
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff,#ffd8f6);>
     <div class=" container">
         <div class="content-section-heading mb-5">
             <p class="h1" style="color: #ff4a75; font-weight: 900;  font-size: 90px">1+1+1 </p>
@@ -199,7 +205,7 @@
         </div>
         </div>
     </section>
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff, #c1e6ff);">
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff, #c1e6ff);" id="hey">
    
         <div class="content-section-heading mb-5">
             <p class="h1" style="color: #00C1EA; font-weight: 900;  font-size: 90px">100% </p>
@@ -225,7 +231,7 @@
         </div>
         
     </section>
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff, #f7e9fc);">
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff, #f7e9fc);">
    
         <div class="content-section-heading mb-5">
             <p class="h1" style="color: #7d16fd; font-weight: 900;  font-size: 90px">16가지</p>
@@ -270,7 +276,7 @@
         </div>
         
     </section>
-    <section class="content-section text-center" style="background-image: linear-gradient(#ffffff, #EBF6E4);">
+    <section class="content-section text-center view" style="background-image: linear-gradient(#ffffff, #EBF6E4);">
     
         <div class="content-section-heading mb-5">
             <p class="h1" style="color: #4ec300; font-weight: 900;  font-size: 90px">4,000자</p>
@@ -279,7 +285,7 @@
             <p style="font-size: 30px">영작하면, 1:1첨삭을 매 수업 제공해요.</p>
             <p style="font-size: 30px">오직 유폰에서만 가능하다는 것.</p>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center view">
             <div class="col-sm-12 col-md-9 ">
                 <div class="d-inline-flex align-items-center justify-content-center">
                     <img src="img/graph_5.png">
@@ -296,7 +302,7 @@
         </div>
        
     </section>
-    <section class="content-section text-center" style="background-color: #000">
+    <section class="content-section text-center view" style="background-color: #000">
       
             <div class="content-section-heading mb-5">
                 <img src="img/txt_gra.png" class="mb-3">
@@ -313,7 +319,7 @@
                         <div class="card h3 pl-2 pr-2 pt-4 pb-4 text-white" style="border-radius: 0px 20px 20px 0px; background-color: #4EC300">정규회화 160분</div>
                     </div>
                 </div>
-                 <div class="col-sm-6 col-lg-6 h3 text-left pl-md-5" style="color:#888888;">직장인 20분 수업, 이*연 수강생</div>
+                 <div class="col-12 h4 mt-4 ml-5" style="color:#888888;">직장인 20분 수업, 이*연 수강생</div>
             </div>
              <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-9 ">
@@ -323,7 +329,8 @@
                         <div class="card h3  pt-4 pb-4 text-white" style="border-radius: 0px 20px 20px 0px; background-color: #FF4A75">미디어 잉글리쉬 180분</div>
                     </div>
                 </div>
-                 <div class="col-sm-6  col-lg-6 h3 text-left pl-md-5" style="color:#888888;">대학생 20분 수업, 신*훈 수강생</div>
+
+                 <div class="col-12 h4 mt-4 ml-5" style="color:#888888;">대학생 20분 수업, 신*훈 수강생</div>
             </div>
         
     </section>
@@ -355,32 +362,35 @@
        
     </section>
 
-    <section>
+    <section class="">
     
         <div class="d-flex mt-5">
             <div class="container text-center my-auto">
-                <h3 class="mb-1  display-3">궁금하다면?</h3>
+                <h3 class="mb-1  display-3 form2">궁금하다면?</h3>
                 <h3 class="mb-5  display-1 text2">
                     무료수업 신청하기</h3>
             </div>
         </div>
-        <div class="d-flex justify-content-center" ><img src="img/img_step.png"></div>
+        <div class="d-flex justify-content-center form2" ><img src="img/img_step.png"></div>
         <div class="d-flex justify-content-center formClass">
             <form class="col-lg-7 col-sm-11 mt-4 pl-sm-4">
                
                 <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-lg mb-4">
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
-                <div class="input-group input-group-lg mb-4">
-                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                 <div class="input-group input-group-lg mb-4">
+                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon3">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon3">일시 변경</button>
+                    </div>
                 </div>
                 <div class="input-group input-group-lg mb-4">
                     <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
-                <input class="mr-4 ml-4" type="checkbox" id="checkbox1"><label for="checkbox1" class="h3">(선택) abc도 어려운 왕초보를 위한 전화수업</label>
+                <input class="mr-4 ml-4" type="checkbox" id="checkbox1"><label for="checkbox1" class="h3 form2">(선택) abc도 어려운 왕초보를 위한 전화수업</label>
                 <div class="dropdown-divider"></div>
                 <div class="row">
                     <div class="col-12">
@@ -393,14 +403,14 @@
                                     <input class=" ml-2 mr-3" type="checkbox" id="checkbox3"  style="-webkit-transform: scale(2);"><span for="checkbox3" class="h5 ">개인정보 수집 및 이용 동의</span>
                                 </div>
                                 <div class="col-sm-6" style="width: 100%">
-                                    <input class="mr-3" type="checkbox" id="checkbox4"  style="-webkit-transform: scale(2);"><span for="checkbox4" class="h5 ">할인/이벤트 안내 동의(선택)</span>
+                                    <input class="mr-3" type="checkbox" id="checkbox4"  style="-webkit-transform: scale(2);"><span for="checkbox4" class="h5 form2">할인/이벤트 안내 동의(선택)</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-lg mb-4 button text-white">무료수업 선착순 마감</button>
+                    <button type="button" class="btn btn-lg mb-4 button text-white form2">무료수업 선착순 마감</button>
                 </div>
             </form>
         </div>
@@ -419,6 +429,203 @@
                 </div>
         </div>
     </section>
+
+
+    <div id="bottomSheetContainer" class="bottomSheetContainer"  style="width:300px;height:90px;position:fixed;bottom:0;right:0;z-index:2;">
+        <div class="card text-center   h3 text-white" style="font-weight:bold; height: 100%; border-radius: 50px 50px 0 0; background-image: linear-gradient(to right, #fd5c77, #9800ef);">
+            <span style="margin-top: 25px; display: inline-block;vertical-align: middle; line-height: normal;">
+                  무료수업 선착순마감
+            </span>
+        </div>
+    </div>
+
+   <div id="bottomSheetDialog" class="modal" style="position:fixed;bottom:0;z-index:100;">
+        
+         <div class="bottomSheetContent " style="background-color: white; border-radius: 30px 30px 0 0; position: fixed; bottom:0; width: 100%; height: 90%; overflow-y: auto">
+         <div style="background-color: #f2f3f8">
+        <div class="d-flex mt-5">
+            <div class="container text-center my-auto">
+                <p class="mt-3" style="font-size: 30px; font-weight:bold;">
+                    무료수업 신청하기</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" ><img src="img/img_step.png" class="col-lg-5"></div>
+       </div>
+         <div class="d-flex justify-content-center formClass">
+            <form class="col-lg-7 col-sm-11 mt-4 pl-sm-4 ">
+               
+                <div class="input-group input-group-lg mb-4">
+                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-lg mb-4">
+                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                 <div class="input-group input-group-lg mb-4">
+                    <input type="text" class="form-control textfield " aria-label="Large" aria-describedby="inputGroup-sizing-sm button-addon4">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary timeBtn" type="button" id="button-addon4">일시 변경</button>
+                    </div>
+                </div>
+                <div class="input-group input-group-lg mb-4">
+                    <input type="text" class="form-control textfield" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <input class="mr-4 ml-4" type="checkbox" id="checkbox1"><label for="checkbox1" class="h3">(선택) abc도 어려운 왕초보를 위한 전화수업</label>
+                <div class="dropdown-divider"></div>
+                <div class="row">
+                    <div class="col-12">
+                        <input class="mr-4 ml-4" type="checkbox" id="checkbox2"><label for="checkbox2" class="h3">전체 동의</label>
+                    </div>
+                    <div class="col-12">
+                        <div class="box1 align-items-center mb-4">
+                            <div class="d-inline-flex justify-content-center align-items-center mt-3" style="width: 100%">
+                                <div class="col-sm-6 pr-0" style="width: 100%">
+                                    <input class=" ml-2 mr-3" type="checkbox" style="-webkit-transform: scale(2);" id="checkbox3"><span for="checkbox3" class="h5 ">개인정보 수집 및 이용 동의</span>
+                                </div>
+                                <div class="col-sm-6" style="width: 100%">
+                                    <input class="mr-3" type="checkbox" style="-webkit-transform: scale(2);" id="checkbox4"><span for="checkbox4" class="h5 ">할인/이벤트 안내 동의(선택)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-lg mb-4 button text-white">무료수업 선착순 마감</button>
+                </div>
+            </form>
+        </div>
+      </div>
+   </div>
+
+   <div id="timeTableContainer" class="modal"  style="position:fixed;bottom: 0;z-index:200;">
+        <div class="timeTable " style="background-color: white;position: fixed;top:0;bottom: 0; left: 0; width: 100%;overflow-y: auto">
+             <div class="d-flex justify-content-center px-2 py-2 pt-4 mb-5" style="background-color: #3d8bf7" >
+                 <h3 class="text-white">무료수업 수업일시 선택</h3>
+                 <h3 class="text-white mr-4" style="position:fixed; right:0;" id="closeBtn">닫기</h3>
+             </div>
+             <div class="container text-center my-auto">
+                <div class="timeTab mb-3">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-xl active" id="option1" style="background-color: #3d8bf7; border: 2px solid rgba(0,0,0,.125)">
+                        02-11-2020
+                      </label>   
+                      <label class="btn btn-xl" id="option2" style="background-color: white; border: 2px solid rgba(0,0,0,.125)">
+                         02-12-2020
+                      </label>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-center" style="overflow-y: auto">
+                        <div class="col-6 time">
+                        <ul class="col-12 list">
+                            <li>12:00</li>
+                            <li>12:10</li>
+                            <li>12:20</li>
+                            <li>12:30</li>
+                            <li>12:40</li>
+                            <li>12:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>13:00</li>
+                            <li>13:10</li>
+                            <li>13:20</li>
+                            <li>13:30</li>
+                            <li>13:40</li>
+                            <li>13:50</li>
+                        </ul>
+                        <ul class="col-12 list">
+                            <li>14:00</li>
+                            <li>14:10</li>
+                            <li>14:20</li>
+                            <li>14:30</li>
+                            <li>14:40</li>
+                            <li>14:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>15:00</li>
+                            <li>15:10</li>
+                            <li>15:20</li>
+                            <li>15:30</li>
+                            <li>15:40</li>
+                            <li>15:50</li>
+                        </ul>
+                         <ul class="col-12 list">
+                            <li>16:00</li>
+                            <li>16:10</li>
+                            <li>16:20</li>
+                            <li>16:30</li>
+                            <li>16:40</li>
+                            <li>16:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>17:00</li>
+                            <li>17:10</li>
+                            <li>17:20</li>
+                            <li>17:30</li>
+                            <li>17:40</li>
+                            <li>17:50</li>
+                        </ul>
+                        <ul class="col-12 list">
+                            <li>18:00</li>
+                            <li>18:10</li>
+                            <li>18:20</li>
+                            <li>18:30</li>
+                            <li>18:40</li>
+                            <li>18:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>19:00</li>
+                            <li>19:10</li>
+                            <li>19:20</li>
+                            <li>19:30</li>
+                            <li>19:40</li>
+                            <li>19:50</li>
+                        </ul>
+                         <ul class="col-12 list">
+                            <li>20:00</li>
+                            <li>20:10</li>
+                            <li>20:20</li>
+                            <li>20:30</li>
+                            <li>20:40</li>
+                            <li>20:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>21:00</li>
+                            <li>21:10</li>
+                            <li>21:20</li>
+                            <li>21:30</li>
+                            <li>21:40</li>
+                            <li>21:50</li>
+                        </ul>
+                        <ul class="col-12 list">
+                            <li>22:00</li>
+                            <li>22:10</li>
+                            <li>22:20</li>
+                            <li>22:30</li>
+                            <li>22:40</li>
+                            <li>22:50</li>
+                        </ul>
+                         <ul class=" col-12 list">
+                            <li>23:00</li>
+                            <li>23:10</li>
+                            <li>23:20</li>
+                            <li>23:30</li>
+                            <li>23:40</li>
+                            <li>23:50</li>
+                        </ul>
+                    </div>
+                    </div>
+                
+            </div>
+             <footer class="footer text-center" style="background-color:#2a2f35">
+        <div class="container">
+            <p class="h5 mb-1 mt-1 text-white">이용약관 | 개인정보취급방침 | PC버전</p>
+            <p class="h5 mb-1 mt-1 text-white">(주) 민병철교육그룹 | 사업자등록번호 220-81-12206</p>
+            <p class="h5 mb-1 mt-1 text-white">대표자명 민병철 | 서울 강남구 테헤란로 518, 11층</p>
+            <p class="h5 mb-1 mt-1 text-white">전화영어ㆍ영어회화 1위</p>
+            <p class="h5 mb-1 mt-1 text-white">통신판매업신고번호 제 06837호</p>
+        </div>
+    </footer>
+      </div>
+   </div>
    
     
    
@@ -433,9 +640,7 @@
         </div>
     </footer>
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -510,8 +715,137 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+
+.bottomSheetContent{
+     -webkit-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+  transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+}
+
+.bottomSheetContainer{
+    position: fixed;
+    bottom: 0;
+}
+
+.list{
+    display: table;
+}
+
+.timeTable .time .list li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 28px;
+    color: #515151;
+}
+
+ul {
+    list-style-type: disc;
+    
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    border-top: 2px solid rgba(0,0,0,.125)
+}
+
+
 </style>
 <script>
+
+    function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+$( document ).ready(function() {
+    $('.bottomSheetContainer').hide();
+
+    $(".bottomSheetContainer").click(function(){
+  });
+});
+
+$(window).scroll(function(){
+  if (isScrolledIntoView($('.formSection'))){
+   $('.bottomSheetContainer').hide()
+  }else{
+    $('.bottomSheetContainer').show()
+  }
+});
+
+
+var modal = document.getElementById('bottomSheetDialog');
+var btn = document.getElementById('bottomSheetContainer');
+var body = document.getElementsByTagName("BODY")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  body.style.overflowY = "hidden";
+  
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    body.style.overflowY = "visible";
+  }
+}
+
+
+var timeModal = document.getElementById('timeTableContainer');
+var timeBtn = document.getElementById('button-addon2');
+var timeBtn1 = document.getElementById('button-addon3');
+var timeBtn2 = document.getElementById('button-addon4');
+
+timeBtn.onclick = function(){
+    timeModal.style.display = "block"
+    body.style.overflowY = "hidden";
+     console.log('a')
+}
+
+timeBtn1.onclick = function(){
+    timeModal.style.display = "block"
+    body.style.overflowY = "hidden";
+     console.log('a')
+}
+
+timeBtn2.onclick = function(){
+    timeModal.style.display = "block"
+    body.style.overflowY = "hidden";
+     console.log('a')
+}
+
+var closeBtn = document.getElementById('closeBtn');
+closeBtn.onclick = function(){
+    timeModal.style.display = "none";
+    body.style.overflowY = "visible";
+}
+
+var timeTab1 = document.getElementById('option1');
+var timeTab2 = document.getElementById('option2');
+
+timeTab1.onclick = function(){
+    timeTab1.style.backgroundColor = '#3d8bf7';
+    timeTab2.style.backgroundColor = 'white';
+    console.log('d')
+}
+
+timeTab2.onclick = function(){
+    timeTab1.style.backgroundColor = 'white';
+    timeTab2.style.backgroundColor = '#3d8bf7';
+}
+
+   
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
@@ -537,4 +871,6 @@ var mySwiper = new Swiper('.swiper-container', {
         el: '.swiper-scrollbar',
     },
 })
+
+
 </script>
